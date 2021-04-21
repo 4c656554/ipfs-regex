@@ -7,33 +7,44 @@
 
 ```
 $ npm install --save ipfs-regex
-```
 
+
+```
+## Supported CIDv1 default multibase prefixes:
+
+    > *encoding*             *code*                               
+    > base16upper            F
+    > hexadecimal base32     b
+    > base32upper            B
+    > base58btc              z
+   
+
+## Default CIDv1  multibase prefixes not yet supported:
+    > identity               0x00
+    > base16                 f
+    > base64                 m   
+    > base64url              u
+    > base64urlpad           U
+    > 
+
+see https://github.com/multiformats/multibase#multibase-table
 
 ## Usage
 
 ```js
-const base64Regex = require('ipfs-regex');
+const ipfsRegex = require('ipfs-regex');
 
-ipfsRegex().test('dW5pY29ybg== foo bar');
+ipfsRegex().test('QmcRD4wkPPi6dig81r5sLj9Zm1gDCL4zgpEj9CfuRrGbzFr');
 //=> true
 
-ipfsRegex({exact: true}).test('dW5pY29ybg== foo bar');
-//=> false
-
-ipfsRegex({exact: true}).test('dW5pY29ybg==');
+ipfsRegex().test('bafybeigrf2dwtpjkiovnigysyto3d55opf6qkdikx6d65onrqnfzwgdkfa');
 //=> true
-
-'foo dW5pY29ybg== bar Ym9hdA=='.match(base64Regex());
-//=> ['dW5pY29ybg==', 'Ym9hdA==']
-```
-
 
 ## API
 
-### ipfsRegex([options])
+### ipfsRegex()
 
-Returns a regex for matching base64 encoded strings.
+Returns a regex for matching IPFS CIDs.
 
 
 ## License
