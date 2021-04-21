@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = opts => {
+module.exports = () => {
 	opts = Object.assign({}, opts);
-	const regex = '(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)';
-	return opts.exact ? new RegExp(`(?:^${regex}?$)`) : new RegExp(regex, 'g');
+	const regex = 'Qm[1-9A-HJ-NP-Za-km-z]{44,}|b[A-Za-z2-7]{58,}|B[A-Z2-7]{58,}|z[1-9A-HJ-NP-Za-km-z]{48,}|F[0-9A-F]{50,}';
+	return new RegExp(regex, 'g');
 };
