@@ -1,6 +1,6 @@
 # ipfs-regex 
 
-> Regular expression for matching ipfs (content identifiers)[https://docs.ipfs.io/concepts/content-addressing/].
+> Regular expression for matching ipfs [content identifiers](https://docs.ipfs.io/concepts/content-addressing/).
 
 
 ## Install
