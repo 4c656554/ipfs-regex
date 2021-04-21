@@ -1,11 +1,11 @@
 {
-  "name": "base64-regex",
+  "name": "ipfs-regex",
   "version": "2.0.0",
-  "description": "Regular expression for matching base64 encoded strings",
+  "description": "Regular expression for matching IPFS Content Identifiers (CIDs)",
   "license": "MIT",
-  "repository": "kevva/base64-regex",
+  "repository": "4c656554/base64-regex",
   "author": {
-    "name": "Kevin Mårtensson",
+    "name": "Lee Mårtensson",
     "email": "kevinmartensson@gmail.com",
     "url": "https://github.com/kevva"
   },
@@ -19,7 +19,10 @@
     "index.js"
   ],
   "keywords": [
-    "base64",
+    "ipfs",
+    "CID",
+    "CIDv0",
+    "CIDv1",
     "regex",
     "string"
   ],
